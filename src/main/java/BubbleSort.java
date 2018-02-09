@@ -1,17 +1,17 @@
 
 public class BubbleSort {
 
-    private boolean ifChanged;
+    private boolean ifSorted;
     private int[] sortedArray;
 
 
-    private boolean checkIfArrayWasSorted(boolean ifChanged){
+    private boolean checkIfArrayWasSorted(boolean ifChanged) {
         return ifChanged;
     }
 
-    private int[] copySourceArrayToSortedArray(int[] notSortedArray){
+    private int[] copySourceArrayToSortedArray(int[] notSortedArray) {
 
-        for(int i = 0; i < notSortedArray.length; i++){
+        for (int i = 0; i < notSortedArray.length; i++) {
             sortedArray[i] = notSortedArray[i];
         }
         return sortedArray;
@@ -26,20 +26,21 @@ public class BubbleSort {
         sortedArray = new int[notSortedArray.length];
 
         for (int i = 0; i < notSortedArray.length - 1; i++) {
-            int temporary;
+            int temporaryValueKeeper;
 
-            ifChanged = false;
+            ifSorted = false;
             for (int j = 0; j < notSortedArray.length - 1; j++) {
+
                 if (notSortedArray[j] > notSortedArray[j + 1]) {
-                    temporary = notSortedArray[j];
+                    temporaryValueKeeper = notSortedArray[j];
                     notSortedArray[j] = notSortedArray[j + 1];
-                    notSortedArray[j + 1] = temporary;
-                    ifChanged = true;
+                    notSortedArray[j + 1] = temporaryValueKeeper;
+                    ifSorted = true;
                 }
             }
         }
 
-        if(checkIfArrayWasSorted(!ifChanged)){
+        if (checkIfArrayWasSorted(!ifSorted)) {
             copySourceArrayToSortedArray(notSortedArray);
         }
 
