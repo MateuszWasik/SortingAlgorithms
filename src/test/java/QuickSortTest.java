@@ -14,8 +14,7 @@ public class QuickSortTest {
     @Test
     public void shouldReturnQuickSortedArray() {
 
-    assertThat(quickSort.quickSortAlgorithm(givenRawIntegerArray), is(expectedBubbleSortedArray));
-
+    assertThat(quickSort.quickSortAlgorithm(givenRawIntegerArray, 0, 8), is(expectedBubbleSortedArray));
 
     }
 
