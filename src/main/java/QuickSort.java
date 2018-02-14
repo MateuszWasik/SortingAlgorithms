@@ -9,10 +9,6 @@ public class QuickSort {
 
     private int partition(int[] toBeSorted, int leftIndex, int rightIndex) {
 
-        if (!checkIfNotEmpty(toBeSorted)) {
-            return -1;
-        }
-
         int pivot = toBeSorted[(leftIndex + rightIndex) / 2];
 
         while (leftIndex <= rightIndex) {
@@ -33,16 +29,20 @@ public class QuickSort {
 
     public int[] quickSortAlgorithm(int[] toBeSorted, int leftIndex, int rightIndex) {
 
-        int index = partition(toBeSorted, leftIndex, rightIndex);
+        if (checkIfNotEmpty(toBeSorted)) {
 
-        if(leftIndex < index - 1){
-            quickSortAlgorithm(toBeSorted, leftIndex, index - 1);
-        }
-        if(index < rightIndex){
-            quickSortAlgorithm(toBeSorted, index, rightIndex);
-        }
+            int index = partition(toBeSorted, leftIndex, rightIndex);
 
-        return toBeSorted;
+            if (leftIndex < index - 1) {
+                quickSortAlgorithm(toBeSorted, leftIndex, index - 1);
+            }
+            if (index < rightIndex) {
+                quickSortAlgorithm(toBeSorted, index, rightIndex);
+            }
+
+            return toBeSorted;
+
+        } else
+            return null;
     }
-
 }
