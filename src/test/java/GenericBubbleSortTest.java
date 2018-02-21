@@ -22,6 +22,10 @@ public class GenericBubbleSortTest {
         toBeSorted.add("Zbigniew");
     }
 
+    @Test
+    public void asd() {
+
+    }
 
     @Test
     public void shouldReturnSortedList() {
@@ -52,6 +56,4 @@ public class GenericBubbleSortTest {
         generateRawList();
         assertThat(genericBubbleSort.sort(toBeSorted)).hasSize(expectedArraySize);
     }
-
-
 }
