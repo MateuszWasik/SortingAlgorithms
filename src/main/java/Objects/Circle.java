@@ -9,7 +9,7 @@ public class Circle implements SurfaceArea {
     }
 
     @Override
-    public double calculate() {
+    public double calculateSurfaceArea() {
         return Math.PI*(r*r);
     }
 }

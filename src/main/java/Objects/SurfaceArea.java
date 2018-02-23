@@ -2,7 +2,7 @@ package Objects;
 
 public interface SurfaceArea {
 
-    public double calculate();
+    public double calculateSurfaceArea();
 
 }
 

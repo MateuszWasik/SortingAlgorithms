@@ -9,7 +9,8 @@ public class Square implements SurfaceArea {
     }
 
     @Override
-    public double calculate() {
+    public double calculateSurfaceArea() {
         return a*a;
     }
+
 }

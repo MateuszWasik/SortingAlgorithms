@@ -11,7 +11,8 @@ public class Triangle implements SurfaceArea {
     }
 
     @Override
-    public double calculate() {
+    public double calculateSurfaceArea() {
         return (1/2*a)*h;
     }
+
 }
