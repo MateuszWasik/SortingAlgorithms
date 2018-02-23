@@ -3,9 +3,15 @@ package Objects;
 public class Circle implements SurfaceArea {
 
     double r;
+    private double surfaceArea;
 
-    Circle(double r) {
+    public Circle(double r) {
         this.r = r;
+        this.surfaceArea = calculateSurfaceArea();
+    }
+
+    public double getSurfaceArea() {
+        return surfaceArea;
     }
 
     @Override

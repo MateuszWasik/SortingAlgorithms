@@ -1,7 +1,9 @@
+import Objects.Circle;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -22,9 +24,15 @@ public class GenericBubbleSortTest {
         toBeSorted.add("Zbigniew");
     }
 
-    @Test
-    public void asd() {
+    private List<Circle> circleList = new ArrayList<>();
 
+    private List<Circle> generate(){
+
+        Random random = new Random();
+        for(int i = 0; i < 10; i++){
+            circleList.add(new Circle(random.nextInt(10)));
+        }
+        return circleList;
     }
 
     @Test

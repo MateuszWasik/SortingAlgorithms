@@ -15,17 +15,17 @@ public class BubbleSortTest {
     }
 
     @Test
-    public void shouldReturnNullWhenArrayLengthIsZero(){
+    public void shouldReturnNullWhenArrayLengthIsZero() {
         assertThat(bubbleSort.bubbleSortAlgorithm(emptyArray)).isNullOrEmpty();
     }
 
     @Test
-    public void shouldNotHaveDoubledNumbers(){
+    public void shouldNotHaveDoubledNumbers() {
         assertThat(bubbleSort.bubbleSortAlgorithm(givenRawIntegerArray)).doesNotHaveDuplicates();
     }
 
     @Test
-    public void shouldNotBeNull(){
+    public void shouldNotBeNull() {
         assertThat(bubbleSort.bubbleSortAlgorithm(givenRawIntegerArray)).isNotNull();
     }
 }
